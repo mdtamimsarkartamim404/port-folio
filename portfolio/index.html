@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Tamim Sarkar Tamim | Professional Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (Icons) -->
+    <script src="https://kit.fontawesome.com/4f738c7f99.js" crossorigin="anonymous"></script>
+    
+    <style>
+        /* Inter Font and Dark Background Setup */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Deep Dark Background */
+            color: #f9fafb; /* Light Text (Brighter White) */
+            line-height: 1.75;
+            /* Fix for fixed header covering content on scroll */
+            scroll-padding-top: 5rem; 
+        }
+        
+        /* Centered Section Heading with Underline */
+        .section-heading {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem; /* Space for underline */
+            margin-bottom: 2rem;
+            text-align: center; /* Center the text */
+        }
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            /* Center the underline */
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 70%; /* Underline width */
+            max-width: 150px; /* Max width for the underline */
+            height: 4px;
+            background-color: #6366f1; /* Indigo color */
+            border-radius: 9999px;
+        }
+
+        .card {
+            background-color: #161b22; /* Slightly lighter dark for cards */
+            border: 1px solid #30363d;
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .service-icon {
+            color: #6366f1; /* Indigo */
+            font-size: 3.5rem; /* Large icon size */
+            margin-bottom: 1.5rem;
+        }
+        .skill-tag {
+            background-color: #1f2937;
+            color: #e5e7eb; /* Brighter Tag Text (gray-200) */
+            border: 1px solid #374151;
+        }
+        
+        /* Section Divider */
+        .section-divider {
+            border-top: 1px solid #30363d; /* Dark border color */
+            margin-top: 4rem; /* Space above divider */
+            margin-bottom: 4rem; /* Space below divider */
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- Header / Navigation -->
+    <header class="bg-gray-900/95 backdrop-blur-sm sticky top-0 z-50 shadow-lg border-b border-gray-800">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center max-w-7xl">
+            <a href="#hero" class="text-2xl font-bold text-indigo-400 hover:text-indigo-300 transition duration-300 logo-link">
+                Md Tamim Sarkar
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 items-center" id="desktop-menu">
+                <a href="#about" class="text-gray-300 hover:text-indigo-400 transition">About</a>
+                <a href="#services" class="text-gray-300 hover:text-indigo-400 transition">Proficiencies</a>
+                <a href="#skills" class="text-gray-300 hover:text-indigo-400 transition">Skills</a>
+                <a href="#projects" class="text-gray-300 hover:text-indigo-400 transition">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-indigo-400 transition">Contact</a>
+                <a href="mailto:mdtamimsarkartamim@gmail.com" class="bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-indigo-500 transition duration-300 shadow-md">
+                    Email Me
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <a href="#contact" class="md:hidden bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-md">
+                 Contact
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-7xl">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[80vh] flex items-center justify-center text-center py-20 mb-12 rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 shadow-2xl">
+            <div class="max-w-4xl">
+                
+                <!-- Profile Icon Circle (Logo) -->
+                <div class="mx-auto w-40 h-40 mb-6 rounded-full bg-indigo-700 flex items-center justify-center overflow-hidden border-4 border-indigo-400 shadow-xl">
+               <img src="/images/prifile.png" alt="man image" class="w-full h-full object-cover">
+                </div>
+                
+                <h1 class="text-5xl sm:text-6xl font-extrabold mb-4 leading-tight text-white">
+                    Hello, I'm <span class="text-indigo-400">Md Tamim Sarkar Tamim</span>
+                </h1>
+                <p class="text-2xl sm:text-3xl text-gray-200 font-medium mb-6">
+                    Technical Skill Developer & Aspiring Digital Entrepreneur
+                </p>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                    My objective is to build my own business leveraging my knowledge and skills in modern technology, marketing, and vehicle maintenance to achieve success and independence.
+                </p>
+
+                <div class="mt-10 space-x-4 flex justify-center flex-wrap gap-4">
+                    <a href="#skills" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-indigo-500 transition duration-300 shadow-lg text-lg">
+                        Explore My Skills
+                    </a>
+                    <a href="#contact" class="inline-block bg-gray-700 text-gray-200 px-8 py-3 rounded-xl font-semibold hover:bg-gray-600 transition duration-300 shadow-lg text-lg">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-16 mb-12">
+            <div class="text-center">
+                 <h2 class="text-4xl font-bold text-white section-heading">About Me</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10 mt-12">
+                
+                <!-- Personal Details Card -->
+                <div class="card p-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-indigo-400 mb-4 flex items-center"><i class="fas fa-id-card mr-3"></i>Personal & Contact Details</h3>
+                        <table class="w-full text-left text-gray-300 text-base mb-6">
+                            <tbody>
+                                <tr class="border-b border-gray-800"><td class="py-2 font-medium text-gray-100 w-1/2">Full Name:</td><td class="py-2">Md Tamim Sarkar Tamim</td></tr>
+                                <tr class="border-b border-gray-800"><td class="py-2 font-medium text-gray-100">Father’s Name:</td><td class="py-2">Md. Somez Uddin Sarkar</td></tr>
+                                <tr class="border-b border-gray-800"><td class="py-2 font-medium text-gray-100">Mother’s Name:</td><td class="py-2">Mst. Roma Khatun</td></tr>
+                                <tr class="border-b border-gray-800"><td class="py-2 font-medium text-gray-100">Date of Birth:</td><td class="py-2">16 August 2005</td></tr>
+                                <tr class="border-b border-gray-800"><td class="py-2 font-medium text-gray-100">Address:</td><td class="py-2">Binodpur Bazar, Rajshahi</td></tr>
+                                <tr class="border-b border-gray-800"><td class="py-2 font-medium text-gray-100">Phone:</td><td class="py-2 text-gray-500 italic">Available Upon Request</td></tr>
+                                <tr><td class="py-2 font-medium text-gray-100">Email:</td><td class="py-2"><a href="mailto:mdtamimsarkartamim@gmail.com" class="hover:text-indigo-300 break-words">mdtamimsarkartamim@gmail.com</a></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-indigo-400 mb-4 flex items-center"><i class="fas fa-user-check mr-3"></i>My Qualities</h3>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 text-base">
+                            <li><span class="font-semibold text-white">Hardworking & Responsible:</span> Dedicated to completing tasks with diligence and accountability.</li>
+                            <li><span class="font-semibold text-white">Eager to Learn New Technologies:</span> Constantly seeking to update skills in modern tech and methodologies.</li>
+                            <li><span class="font-semibold text-white">Customer Service Oriented:</span> Committed to providing excellent service and ensuring client satisfaction.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education & Hobbies Card -->
+                <div class="card p-8 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-indigo-400 mb-6 flex items-center"><i class="fas fa-graduation-cap mr-3"></i>Educational Journey</h3>
+                        
+                        <div class="space-y-6">
+                            
+                            <!-- Education Item 1 -->
+                            <div class="relative pl-6 border-l-2 border-gray-700">
+                                <span class="absolute -left-3 top-0.5 w-5 h-5 bg-indigo-600 rounded-full border-2 border-gray-900"></span>
+                                <p class="text-gray-200 text-sm">2024</p>
+                                <h4 class="text-xl font-semibold text-white">Alim (Higher Secondary Equivalent)</h4>
+                                <p class="text-gray-300">Budpara Alim Madrasa, Madrasa Board</p>
+                                <p class="text-sm text-indigo-300 mt-1">GPA: 4.07</p>
+                            </div>
+
+                            <!-- Education Item 2 -->
+                            <div class="relative pl-6 border-l-2 border-gray-700">
+                                <span class="absolute -left-3 top-0.5 w-5 h-5 bg-indigo-600 rounded-full border-2 border-gray-900"></span>
+                                <p class="text-gray-200 text-sm">2022</p>
+                                <h4 class="text-xl font-semibold text-white">Dakhil (Secondary Equivalent)</h4>
+                                <p class="text-gray-300">Budpara Alim Madrasa, Madrasa Board</p>
+                                <p class="text-sm text-indigo-300 mt-1">GPA: 4.50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-semibold text-indigo-400 mb-4 flex items-center"><i class="fas fa-book-open mr-3"></i>Hobbies & Interests</h3>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 text-base">
+                            <li>Reading to broaden knowledge and perspectives.</li>
+                            <li>Exploring the Internet for new technologies and industry trends.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Divider -->
+        <hr class="section-divider">
+
+        <!-- Core Technical Proficiencies Section -->
+        <section id="services" class="py-16 mb-12">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold text-white section-heading">Core Technical Proficiencies</h2>
+            </div>
+            <p class="text-gray-300 text-center text-lg mt-4 max-w-2xl mx-auto">
+                Specialized technical knowledge developed through practical application and self-directed learning.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                
+                <!-- R&AC Card -->
+                <div class="card p-8 text-center">
+                    <i class="fas fa-snowflake service-icon"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Refrigeration & AC Servicing</h3>
+                    <p class="text-gray-300 mb-4">
+                        Proficient in maintenance, troubleshooting, and basic repairs for refrigeration and air conditioning units.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-500 text-sm space-y-1 ml-4 text-left inline-block">
+                        <li>Troubleshooting & Diagnostics</li>
+                        <li>Routine Maintenance & Cleaning</li>
+                        <li>Basic Installation & Repair</li>
+                    </ul>
+                </div>
+
+                <!-- Automobile Card -->
+                <div class="card p-8 text-center">
+                    <i class="fas fa-car-alt service-icon"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Car Driving & Basic Maintenance</h3>
+                    <p class="text-gray-300 mb-4">
+                        Reliable driving complemented by essential vehicle maintenance to ensure safety and performance.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-500 text-sm space-y-1 ml-4 text-left inline-block">
+                        <li>Routine Vehicle Care (Oil, Fluids, Tires)</li>
+                        <li>Basic Brake & Electrical Checks</li>
+                        <li>Safe & Proficient Driving</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Divider -->
+        <hr class="section-divider">
+
+        <!-- My Core Skills Section -->
+        <section id="skills" class="py-16 mb-12">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold text-white section-heading">My Core Skills</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+                
+                <!-- Computer Proficiency Card -->
+                <div class="card p-8 text-center">
+                    <i class="fas fa-desktop text-5xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Computer Proficiency</h3>
+                    <div class="flex flex-wrap justify-center gap-2 text-sm">
+                        <span class="skill-tag px-3 py-1 rounded-md">Linux Experience</span>
+                        <span class="skill-tag px-3 py-1 rounded-md">Windows Experience</span>
+                        <span class="skill-tag px-3 py-1 rounded-md">MS Word</span>
+                        <span class="skill-tag px-3 py-1 rounded-md">Browsing</span>
+                        <span class="skill-tag px-3 py-1 rounded-md">Explore Internet</span>
+                    </div>
+                </div>
+
+                <!-- Digital & Marketing Card -->
+                <div class="card p-8 text-center">
+                    <i class="fas fa-laptop-code text-5xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Digital & Marketing</h3>
+                    <div class="flex flex-wrap justify-center gap-2 text-sm">
+                        <span class="skill-tag px-3 py-1 rounded-md">Social Media Marketing</span>
+                        <span class="skill-tag px-3 py-1 rounded-md">Targeted Advertising</span>
+                        <span class="skill-tag px-3 py-1 rounded-md">MS Office (CRM)</span>
+                        <span class="skill-tag px-3 py-1 rounded-md">Basic Programming</span>
+                    </div>
+                </div>
+
+                <!-- Language Skills Card -->
+                <div class="card p-8 text-center">
+                    <i class="fas fa-language text-5xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Language Skills</h3>
+                    <div class="flex flex-wrap justify-center gap-2 text-sm">
+                        <span class="skill-tag px-3 py-1 rounded-md">Bengali (Native)</span>
+                        <span class="skill-tag px-3 py-1 rounded-md">English (Conversational)</span>
+                        <span class="skill-tag px-3 py-1 rounded-md">Arabic (Basic)</span>
+                    </div>
+                </div>
+
+                <!-- NEW: Automobile Skills Card -->
+                <div class="card p-8 text-center">
+                    <i class="fas fa-car-alt text-5xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-4">Automobile Skills</h3>
+                    <div class="flex flex-wrap justify-center gap-2 text-sm">
+                        <span class="skill-tag px-3 py-1 rounded-md">Car Driving</span>
+                        <span class="skill-tag px-3 py-1 rounded-md">Basic Maintenance</span>
+                        <span class="skill-tag px-3 py-1 rounded-md">Routine Vehicle Care</span>
+                    </div>
+                </div>
+                <!-- END NEW CARD -->
+
+            </div>
+        </section>
+        
+        <!-- Section Divider -->
+        <hr class="section-divider">
+
+        <!-- My Projects & Experience Section -->
+        <section id="projects" class="py-16 mb-12">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold text-white section-heading">My Projects & Experience</h2>
+            </div>
+            <p class="text-gray-300 text-center text-lg mt-4 max-w-2xl mx-auto">
+                Practical experience that underpins my technical skills and entrepreneurial ambitions.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                
+                <!-- Project 1 Card -->
+                <div class="card p-8">
+                    <h3 class="text-2xl font-semibold text-indigo-400 mb-3 flex items-center"><i class="fas fa-cogs mr-3"></i>Technical Service & Training</h3>
+                    <p class="text-gray-300 italic mb-4">Hands-on Expertise & Service Pilot</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 text-base">
+                        <li><span class="font-semibold text-white">Automobile Focus:</span> Performed routine maintenance (oil changes, fluid checks, tire rotation) on personal/family vehicles, demonstrating practical vehicle upkeep skills.</li>
+                        <li><span class="font-semibold text-white">R&AC Focus:</span> Executed basic cleaning and preventative maintenance on residential AC units, successfully enhancing efficiency and prolonging lifespan.</li>
+                    </ul>
+                </div>
+
+                <!-- Project 2 Card -->
+                <div class="card p-8">
+                    <h3 class="text-2xl font-semibold text-indigo-400 mb-3 flex items-center"><i class="fas fa-globe mr-3"></i>Digital Business Foundation</h3>
+                    <p class="text-gray-300 italic mb-4">Establishing Online Presence & Marketing</p>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 text-base">
+                        <li><span class="font-semibold text-white">Online Presence:</span> Designed and managed social media pages (Facebook, Instagram) to showcase technical services and attract service requests in the Rajshahi area.</li>
+                        <li><span class="font-semibold text-white">Marketing Strategy:</span> Applied knowledge of targeted advertising and basic Social Media Security to build a professional and secure online platform.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Divider -->
+        <hr class="section-divider">
+
+        <!-- Get In Touch Section -->
+        <section id="contact" class="py-16">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold text-white section-heading">Get In Touch</h2>
+            </div>
+            <p class="text-gray-300 mb-10 text-center text-xl max-w-2xl mx-auto mt-8">
+                I'm open to discussing new projects, collaboration opportunities, or inquiries about my skills. Send me a message, and I'll get back to you.
+            </p>
+            
+            <div class="grid md:grid-cols-1 gap-8 text-center mt-12 max-w-3xl mx-auto">
+                
+                <!-- Contact Form Card -->
+                <div class="card p-8">
+                    <h3 class="text-2xl font-semibold text-indigo-400 mb-6">Send Me a Message</h3>
+                    
+                    <form id="contact-form" action="https://api.formsubmit.co/mdtamimsarkartamim@gmail.com,sktamimikbol@gmail.com" method="POST" class="text-left">
+                        
+                        <!-- Honeypot for spam -->
+                        <input type="text" name="_honey" style="display:none">
+                        <!-- Disable Captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
+                                <input type="text" name="name" id="name" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
+                                <input type="email" name="email" id="email" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                            <textarea name="message" id="message" rows="5" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-indigo-500 transition duration-300 shadow-lg">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                    <!-- Status message for AJAX form submission -->
+                    <div id="form-status" class="mt-6 text-lg"></div>
+                </div>
+            </div>
+
+            <!-- Final Social Connect Block (UPDATED LINKS) -->
+            <div class="mt-24 text-center border-t border-gray-800 pt-16">
+                <h3 class="text-3xl font-bold text-white mb-4">Let's Build Something Great Together!</h3>
+                <p class="text-indigo-300 mb-8 font-medium text-xl max-w-2xl mx-auto">
+                    Connect with me to discuss my skills, projects, and collaboration opportunities.
+                </p>
+                <div class="flex justify-center space-x-8">
+                    
+                    <!-- LinkedIn (White Icon + White Text) -->
+                    <a href="https://www.linkedin.com/in/mdtamimsarkartamim404/" target="_blank" class="text-white hover:text-indigo-400 transition transform hover:scale-110 flex flex-col items-center space-y-2">
+                        <i class="fab fa-linkedin-in text-5xl"></i>
+                        <span class="text-sm font-medium text-white">LinkedIn</span>
+                    </a>
+                    
+                    <!-- Facebook (White Icon + White Text) -->
+                    <a href="https://www.facebook.com/mdtamimsarkartamim404" target="_blank" class="text-white hover:text-indigo-400 transition transform hover:scale-110 flex flex-col items-center space-y-2">
+                        <i class="fab fa-facebook-f text-5xl"></i>
+                        <span class="text-sm font-medium text-white">Facebook</span>
+                    </a>
+                    
+                    <!-- Instagram (White Icon + White Text) -->
+                    <a href="https://www.instagram.com/mdtamimsarkartamim404/" target="_blank" class="text-white hover:text-indigo-400 transition transform hover:scale-110 flex flex-col items-center space-y-2">
+                        <i class="fab fa-instagram text-5xl"></i>
+                        <span class="text-sm font-medium text-white">Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-8 mt-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
+            
+            <!-- Social Media Icons in Footer (UPDATED LINKS) -->
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.linkedin.com/in/mdtamimsarkartamim404/" target="_blank" class="text-white hover:text-indigo-400 transition transform hover:scale-110" title="LinkedIn">
+                    <i class="fab fa-linkedin-in text-2xl"></i>
+                </a>
+                <a href="https://www.facebook.com/mdtamimsarkartamim404" target="_blank" class="text-white hover:text-indigo-400 transition transform hover:scale-110" title="Facebook">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com/mdtamimsarkartamim404/" target="_blank" class="text-white hover:text-indigo-400 transition transform hover:scale-110" title="Instagram">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-sm">&copy; <span id="current-year"></span> Md Tamim Sarkar Tamim. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set Current Year in Footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // --- Smooth Scrolling for Navigation ---
+            // Select ALL anchor links in the header that start with # (including the logo link)
+            const menuLinks = document.querySelectorAll('header a[href^="#"]'); 
+
+            // Function to handle smooth scrolling
+            function scrollToSection(event) {
+                event.preventDefault();
+                const targetId = event.currentTarget.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+
+            // Apply smooth scrolling to all menu links
+            menuLinks.forEach(link => {
+                link.addEventListener('click', scrollToSection);
+            });
+
+
+            // --- AJAX Form Submission ---
+            const form = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+
+            async function handleSubmit(event) {
+                event.preventDefault();
+                const data = new FormData(event.target);
+                
+                try {
+                    const response = await fetch(event.target.action, {
+                        method: form.method,
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        formStatus.textContent = "Message sent successfully!";
+                        formStatus.className = "mt-6 text-lg text-green-400";
+                        form.reset();
+                    } else {
+                        // Handle server errors (e.g., FormSubmit server is down)
+                        const errorData = await response.json();
+                        if (Object.hasOwn(errorData, 'errors')) {
+                            formStatus.textContent = errorData["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            formStatus.textContent = "Oops! There was a problem submitting your form.";
+                        }
+                        formStatus.className = "mt-6 text-lg text-red-400";
+                    }
+                } catch (error) {
+                    // Handle network errors (Common when testing from file://)
+                    formStatus.textContent = "Oops! There was a network error. (Note: This is expected when testing locally. Please test on a live server.)";
+                    formStatus.className = "mt-6 text-lg text-red-400";
+                }
+            }
+
+            form.addEventListener("submit", handleSubmit);
+        });
+    </script>
+</body>
+</html>
